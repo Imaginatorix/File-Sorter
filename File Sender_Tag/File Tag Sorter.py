@@ -31,11 +31,8 @@ t = time.time()
 current_hour = time.strftime('%H', time.localtime(t))
 current_minute = time.strftime('%M', time.localtime(t))
 
-print (os.listdir())
-print (int(current_hour) < stop_hour and int(current_minute) < stop_minute)
-
-while int(current_hour) < stop_hour:
-    if int(current_minute) < stop_minute:
+while int(current_hour) <= stop_hour:
+    if int(current_hour) >= stop_hour and int(current_minute) >= stop_minute:
         break
 
     depth = 0
